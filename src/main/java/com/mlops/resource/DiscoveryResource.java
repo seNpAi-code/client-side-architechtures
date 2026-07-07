@@ -11,7 +11,7 @@ import java.util.Map;
  * Discovery endpoint for the MLOps API.
  * Returns metadata about the API including version, contact, and resource links.
  */
-@Path("/api/v1")
+@Path("/")
 @Produces(MediaType.APPLICATION_JSON)
 public class DiscoveryResource {
 

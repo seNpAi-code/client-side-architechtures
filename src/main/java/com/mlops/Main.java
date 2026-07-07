@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class Main {
 
     private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
-    public static final String BASE_URI = "http://localhost:8080/";
+    public static final String BASE_URI = "http://localhost:8080/api/v1/";
 
     /**
      * Creates and configures the Grizzly HTTP server with Jersey.
