@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MLWorkspace {
-    private String id; // Unique identifier, e.g., "WS-VISION-01"
-    private String teamName; // Human-readable team name
+    private String id; // Unique identifier
+    private String teamName; 
     private int storageQuotaGb; // Maximum storage allocated for datasets in GB
     private List<String> modelIds = new ArrayList<>(); // Collection of IDs of models deployed here
 

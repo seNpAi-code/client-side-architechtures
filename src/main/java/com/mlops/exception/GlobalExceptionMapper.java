@@ -17,8 +17,6 @@ public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
 
     @Override
     public Response toResponse(Throwable exception) {
-        // If it's a JAX-RS WebApplicationException (like 404 Not Found thrown by the framework),
-        // we might want to just return its response directly.
         if (exception instanceof WebApplicationException) {
             return ((WebApplicationException) exception).getResponse();
         }
@@ -26,10 +24,7 @@ public class GlobalExceptionMapper implements ExceptionMapper<Throwable> {
         Map<String, String> error = new HashMap<>();
         error.put("error", "Internal Server Error");
         error.put("message", "An unexpected error occurred. Please try again later.");
-
-        // We can log the actual stack trace here on the server side instead of returning it
-        // java.util.logging.Logger.getLogger(GlobalExceptionMapper.class.getName()).log(java.util.logging.Level.SEVERE, exception.getMessage(), exception);
-
+        
         return Response.status(Response.Status.INTERNAL_SERVER_ERROR)
                 .entity(error)
                 .build();

@@ -1,8 +1,8 @@
 package com.mlops.model;
 
 public class MachineLearningModel {
-    private String id; // Unique identifier, e.g., "MOD-8832"
-    private String framework; // Category, e.g., "TensorFlow", "PyTorch", "Scikit-Learn"
+    private String id; // Unique identifier
+    private String framework; // Category
     private String status; // Current state: "TRAINING", "DEPLOYED", or "DEPRECATED"
     private double latestAccuracy; // The most recent accuracy score recorded
     private String workspaceId; // Foreign key linking to the Workspace hosting the model

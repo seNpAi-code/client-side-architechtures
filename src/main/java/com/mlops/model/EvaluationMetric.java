@@ -1,7 +1,7 @@
 package com.mlops.model;
 
 public class EvaluationMetric {
-    private String id; // Unique metric event ID (UUID recommended)
+    private String id; // Unique metric event ID
     private long timestamp; // Epoch time (ms) when the metric was captured
     private double accuracyScore; // The accuracy/F1 score recorded during the evaluation run
 
